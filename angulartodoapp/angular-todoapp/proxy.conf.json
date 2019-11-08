@@ -1,0 +1,10 @@
+{
+    "/api/*": {
+      "target": "http://localhost:8080/users",
+      "secure": false
+    },
+    "/api/tasks/*": {
+      "target": "http://localhost:8080/api/tasks/*",
+      "secure": false
+    }
+  }

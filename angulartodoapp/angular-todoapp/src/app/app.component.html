@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="col-md-offset-1">
+      <h1>
+        Welcome to Todos!
+      </h1>
+    </div>
+    <a routerLink="/users">List Users</a>
+    <a style="margin-left:10px" routerLink="/add">Register</a>
+    <a style="margin-left:10px" routerLink="/login">Login</a>
+    <!-- <a style="margin-left:10px" routerLink="/tasks">Task For User</a>
+    <a style="margin-left:10px" routerLink="/tasks/all">All tasks</a> -->
+    <button id="logout" (click)="logout()" type="submit">Logout</button>
+    <br/>
+    <router-outlet></router-outlet>
+    </div>
+    <footer class="footer">
+      <div class="container">
+          <span>All Rights Reserved 2019 @Martyna</span>
+      </div>
+    </footer>

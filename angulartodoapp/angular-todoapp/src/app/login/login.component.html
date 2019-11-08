@@ -1,0 +1,17 @@
+<div class="col-md-6">
+    <h2 class="text-center">Login</h2> 
+    <h1 *ngIf="register" id="registration">Registration complete!</h1>
+    <form>
+        <div class="form-group">
+          <span class="input"></span>
+          <input [(ngModel)]="user.username" type="text" placeholder="Username" name="username" class="form-control" id="username" autofocus autocomplete="off" />
+          <span id="passwordMeter"></span>
+          <input [(ngModel)]="user.password" type="password" placeholder="Password" name="password" class="form-control" id="password" autofocus autocomplete="off" />
+        </div>
+        <div>
+          <button value="Login" class="btn btn-success" type="submit" (click)="login(user)">Sign in</button>
+        </div>
+    </form>
+  </div>
+  
+   

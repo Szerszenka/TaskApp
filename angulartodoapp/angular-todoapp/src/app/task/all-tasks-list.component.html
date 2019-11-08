@@ -1,0 +1,23 @@
+<div class="col-md-6">
+    <h2> Task Details</h2>
+    
+    <table class="table table-striped">
+      <thead>
+      <tr>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 35%;">Description</th>
+          <th style="width: 25%;">Date of creation</th>
+          <th>Owner</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let task of tasks">
+        <td class="hidden">{{task.taskName}}</td>
+        <td>{{task.taskDesc}}</td>
+        <td>{{task.createDate}}</td>
+        <td>{{task.owner}}</td>
+      </tr>
+      </tbody>
+    </table>
+    
+    </div>

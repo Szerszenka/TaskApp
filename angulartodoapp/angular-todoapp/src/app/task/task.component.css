@@ -1,0 +1,33 @@
+input[type="image"] {
+    flex: 0.5;
+    width: auto;
+    height: 19px;
+    vertical-align: middle;
+}
+
+#addbutton {
+    float: right;
+    border-radius: 3px;
+    background: rgb(140, 197, 123);
+    margin-bottom: 10px;
+    margin-left: 5%;
+}
+
+#taskList {
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 40%;
+    overflow: scroll;
+    height: 20px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+   option:nth-of-type(odd) {
+    background: rgb(255, 255, 255);
+   }
+   option {
+    background: rgb(144, 202, 126);
+    font-weight: bold;
+    font-size: 15px;
+   }

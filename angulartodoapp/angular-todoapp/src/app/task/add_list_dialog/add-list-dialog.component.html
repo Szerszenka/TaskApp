@@ -1,0 +1,13 @@
+<div id="overlay">
+    <div class="align_center">
+        <h2 mat-dialog-title>Add new list</h2>
+            <form #addList = "ngForm">
+                <span class="input"></span>
+                <input matInput [(ngModel)]="data.name" type="text" placeholder="Name" name="name" class="form-control" id="name" autofocus autocomplete="off" />
+        <mat-dialog-actions>
+        <button mat-button mat-dialog-close>Close</button>
+        <button mat-button [mat-dialog-close]="data">Add</button>
+        </mat-dialog-actions>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="col-md-6">
+  <h2> Task Details</h2>
+    <select id="taskList" (change)="selectList($event.target.value)">
+      <option disabled selected value> -- select list of tasks -- </option>
+      <option *ngFor="let list of listsTasks">{{list.name}}</option>
+      <option style="background: rgb(185, 180, 180);" value="add"> -- add new list of tasks -- </option>
+    </select>
+  <button id="addbutton" (click)="addTask()">New Task</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th style="width: 35%;">Name</th>
+      <th style="width: 50%;">Description</th>
+      <th>Done</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let task of tasks">
+      <td>{{task.taskName}}</td>
+      <td>{{task.taskDesc}}</td>
+      <td>    
+        <span class="button-checkbox">
+          <ng-template
+            *ngIf="task.done ;then checked; else notchecked">
+          </ng-template>
+          
+          <ng-template #checked>
+              <input checked type="checkbox" (change)="onChange($event)" value={{task.taskName}}>
+          </ng-template>
+          
+          <ng-template #notchecked>
+              <input type="checkbox" (change)="onChange($event)" value={{task.taskName}}>
+          </ng-template>
+        </span></td>
+      <td>
+          <div style="display: flex;">
+            <button type="text" (click)="deleteTask(task)" width="19px" height="19px">
+              X
+            </button>
+          </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  </div>
